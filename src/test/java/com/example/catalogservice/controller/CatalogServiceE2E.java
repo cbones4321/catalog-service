@@ -1,7 +1,6 @@
 package com.example.catalogservice.controller;
 
 import com.example.catalogservice.domain.Book;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,7 +15,7 @@ public class CatalogServiceE2E {
     private WebTestClient webTestClient;
 
     @Test
-    public void testCreateBook() throws Exception {
+    public void testCreateBook() {
         var newBook = new Book("9789295055025", "When the Doctor is Patient", "Dr. Liz Jones", 34.90);
 
         webTestClient.post().uri("/books").bodyValue(newBook)
