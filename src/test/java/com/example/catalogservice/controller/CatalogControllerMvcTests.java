@@ -1,6 +1,6 @@
 package com.example.catalogservice.controller;
 
-import com.example.catalogservice.BookService;
+import com.example.catalogservice.service.BookService;
 import com.example.catalogservice.errorhandling.BookNotFoundException;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

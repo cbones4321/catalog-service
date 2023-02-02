@@ -1,4 +1,4 @@
-package com.example.catalogservice;
+package com.example.catalogservice.service;
 
 import com.example.catalogservice.domain.Book;
 import com.example.catalogservice.errorhandling.BookAlreadyExistsException;
@@ -43,6 +43,7 @@ public class BookService {
                             newBook.title(),
                             newBook.author(),
                             newBook.price(),
+                            newBook.publisher(),
                             existingBook.createdDate(),
                             existingBook.lastModifiedDate(),
                             existingBook.version()

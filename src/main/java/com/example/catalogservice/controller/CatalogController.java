@@ -1,6 +1,6 @@
 package com.example.catalogservice.controller;
 
-import com.example.catalogservice.BookService;
+import com.example.catalogservice.service.BookService;
 import com.example.catalogservice.domain.Book;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
