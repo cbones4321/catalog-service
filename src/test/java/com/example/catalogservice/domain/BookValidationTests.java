@@ -27,7 +27,8 @@ public class BookValidationTests {
                 "9789295055025",
                 "The King is Coming",
                 "Dr. Calvin Jones",
-                9.99
+                9.99,
+                "Polarsophia"
         );
 
         // when
@@ -46,7 +47,8 @@ public class BookValidationTests {
                 "9789295055025",
                 null,
                 "Dr. Cason Jones",
-                9.99
+                9.99,
+                "Polarsophia"
         );
 
         // when
@@ -63,7 +65,8 @@ public class BookValidationTests {
                 "a33",
                 "Pizza rolls",
                 "Dr. Cason Jones",
-                9.99
+                9.99,
+                "Polarsophia"
         );
 
         // when
@@ -81,7 +84,8 @@ public class BookValidationTests {
                 "9789295055025",
                 "The King is Coming",
                 null,
-                9.99
+                9.99,
+                "Polarsophia"
         );
 
         // when

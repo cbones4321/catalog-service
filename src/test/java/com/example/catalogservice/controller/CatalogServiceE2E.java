@@ -18,7 +18,7 @@ public class CatalogServiceE2E {
 
     @Test
     public void testCreateBook() {
-        var newBook = Book.of("9789295055025", "When the Doctor is Patient", "Dr. Liz Jones", 34.90);
+        var newBook = Book.of("9789295055025", "When the Doctor is Patient", "Dr. Liz Jones", 34.90, "Polarsophia");
 
         webTestClient.post().uri("/books").bodyValue(newBook)
                 .exchange()

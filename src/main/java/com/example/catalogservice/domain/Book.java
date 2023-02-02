@@ -26,6 +26,8 @@ public record Book(
         @NotNull(message = "Price must be defined")
         Double price,
 
+        String publisher,
+
         @CreatedDate
         Instant createdDate,
 
@@ -36,9 +38,9 @@ public record Book(
         int version
 ){
 
-        public static Book of(String isbn, String title, String author, Double price){
+        public static Book of(String isbn, String title, String author, Double price, String publisher){
                 return new Book(
-                        null, isbn, title, author, price, null, null, 0
+                        null, isbn, title, author, price, publisher, null, null, 0
                 );
         }
 }
