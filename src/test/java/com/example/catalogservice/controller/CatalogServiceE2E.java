@@ -4,11 +4,13 @@ import com.example.catalogservice.domain.Book;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@ActiveProfiles("integration ")
 public class CatalogServiceE2E {
 
     @Autowired
@@ -16,7 +18,7 @@ public class CatalogServiceE2E {
 
     @Test
     public void testCreateBook() {
-        var newBook = new Book("9789295055025", "When the Doctor is Patient", "Dr. Liz Jones", 34.90);
+        var newBook = Book.of("9789295055025", "When the Doctor is Patient", "Dr. Liz Jones", 34.90);
 
         webTestClient.post().uri("/books").bodyValue(newBook)
                 .exchange()

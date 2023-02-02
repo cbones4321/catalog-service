@@ -6,8 +6,6 @@ import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("books")
 public class CatalogController {
@@ -25,7 +23,7 @@ public class CatalogController {
     }
 
     @GetMapping
-    public List<Book> getBookList(){
+    public Iterable<Book> getBookList(){
         return this.bookService.viewBookList();
     }
 

@@ -17,7 +17,7 @@ public class BookService {
         this.bookRepository = bookRepository;
     }
 
-    public List<Book> viewBookList(){
+    public Iterable<Book> viewBookList(){
         return bookRepository.findAll();
     }
 
@@ -38,10 +38,14 @@ public class BookService {
         return this.bookRepository.findByIsbn(isbn)
                 .map(existingBook -> {
                     var updatedBook = new Book(
+                            existingBook.id(),
                             existingBook.isbn(),
                             newBook.title(),
                             newBook.author(),
-                            newBook.price()
+                            newBook.price(),
+                            existingBook.createdDate(),
+                            existingBook.lastModifiedDate(),
+                            existingBook.version()
                     );
                     return this.bookRepository.save(updatedBook);
                 })

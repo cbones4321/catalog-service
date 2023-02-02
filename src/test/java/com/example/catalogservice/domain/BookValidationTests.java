@@ -23,7 +23,7 @@ public class BookValidationTests {
     @Test
     public void test_all_fields_created() throws Exception {
         // given
-        Book book = new Book(
+        Book book = Book.of(
                 "9789295055025",
                 "The King is Coming",
                 "Dr. Calvin Jones",
@@ -42,7 +42,7 @@ public class BookValidationTests {
     @Test
     public void when_title_is_null_validation_fails() throws Exception {
         // given
-        Book book = new Book(
+        Book book = Book.of(
                 "9789295055025",
                 null,
                 "Dr. Cason Jones",
@@ -59,7 +59,7 @@ public class BookValidationTests {
     @Test
     public void when_isbn_is_incorrect_validation_fails() throws Exception {
         // given
-        Book book = new Book(
+        Book book = Book.of(
                 "a33",
                 "Pizza rolls",
                 "Dr. Cason Jones",
@@ -77,7 +77,7 @@ public class BookValidationTests {
     @Test
     public void when_author_is_null_validation_fails() throws Exception {
         // given
-        Book book = new Book(
+        Book book = Book.of(
                 "9789295055025",
                 "The King is Coming",
                 null,
